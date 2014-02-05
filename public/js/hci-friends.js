@@ -44,3 +44,12 @@ function anagrammedName(name) {
 		return name;
 	}
 }
+
+$(".name-selector h3").click(nameClick);
+
+function nameClick(e) {
+	e.preventDefault()
+	var curName = $(this).text()
+	$(this).text(anagrammedName(curName))
+	// console.log($(this).text())
+}
